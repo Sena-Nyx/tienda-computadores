@@ -199,7 +199,7 @@ class Controlador{
     /* Registro */
     public function mostrarRegister() {
         $gestor = new Gestor();
-        require 'Vista/html/registro.php';
+        require 'Vista/html/registroCliente.php';
     }
 
     public function registrarUsuario($post) {

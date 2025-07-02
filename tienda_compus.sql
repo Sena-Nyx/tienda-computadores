@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-07-2025 a las 20:26:19
+-- Tiempo de generación: 02-07-2025 a las 20:57:31
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -31,6 +31,15 @@ CREATE TABLE `categorias` (
   `id` int(11) NOT NULL,
   `nombre` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `nombre`) VALUES
+(1, 'Portatiles'),
+(2, 'Computadores de escritorio'),
+(3, 'Repuestos');
 
 -- --------------------------------------------------------
 
@@ -76,6 +85,17 @@ CREATE TABLE `productos` (
   `precio` decimal(10,2) NOT NULL,
   `id_categoria` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `marca`, `modelo`, `tipo`, `especificaciones`, `precio`, `id_categoria`) VALUES
+(13, 'Laptop Gamer', 'Portátil de alto rendimiento para juegos', 'Asus', 'ROG Zephyrus G14', 'Computador', 'AMD Ryzen 7, 16GB RAM, 1TB SSD, RTX 4060', 5200000.00, 1),
+(14, 'Disco SSD 1TB', 'Disco sólido de alta velocidad', 'Samsung', 'EVO 970 Plus', 'Repuesto', 'NVMe, 1TB, 3500MB/s', 420000.00, 3),
+(15, 'PC de Escritorio', 'Computador de escritorio para oficina', 'HP', 'EliteDesk 800', 'Computador', 'Intel i5, 8GB RAM, 512GB SSD', 2800000.00, 2),
+(16, 'Memoria RAM 16GB', 'Memoria RAM DDR4 para PC', 'Kingston', 'HyperX Fury', 'Repuesto', 'DDR4, 16GB, 3200MHz', 180000.00, 3),
+(17, 'Portátil Ultraliviano', 'Portátil delgado y liviano para trabajo', 'Dell', 'XPS 13', 'Computador', 'Intel i7, 16GB RAM, 512GB SSD', 4500000.00, 1);
 
 -- --------------------------------------------------------
 
@@ -148,7 +168,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `imagenes`
@@ -166,7 +186,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
